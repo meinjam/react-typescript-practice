@@ -25,11 +25,13 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
 
     setTodos(newTodos);
     setEditMode(false);
+    localStorage.setItem('allTodos', JSON.stringify(newTodos));
   };
 
   const handleDeleteTodo = (t: Object) => {
     const newTodos = todos.filter((t) => t.id !== todo.id);
     setTodos(newTodos);
+    localStorage.setItem('allTodos', JSON.stringify(newTodos));
   };
 
   return (
