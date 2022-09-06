@@ -6,7 +6,6 @@ import { Todo } from './helpers/models';
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>('');
   const [todos, setTodos] = useState<Todo[]>([]);
-  const [showSearch, setShowSearch] = useState<boolean>(false);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,9 +26,6 @@ const App: React.FC = () => {
             <div className='contents'>
               <div className='header d-flex justify-content-between mb-3'>
                 <h4 className='align-self-center font-weight-bold'>Todo App</h4>
-                <button className='btn btn-success align-self-center'>
-                  Add Todo
-                </button>
               </div>
               <AddTodo todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
               <AllTodos todos={todos} setTodos={setTodos} />

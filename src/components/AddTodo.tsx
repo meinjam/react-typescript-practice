@@ -9,16 +9,16 @@ interface Props {
 const AddTodo: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
   return (
     <form onSubmit={handleAdd} className='search mb-3'>
-      <div className='input-group mb-3'>
+      <div className='d-flex'>
         <input
           type='text'
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
-          placeholder='Enter a task'
+          placeholder='Enter a todo'
           className='form-control form-control-lg'
         />
-        <div className='input-group-append'>
-          <button className='btn btn-info'>Add</button>
+        <div className=''>
+          <button className='btn btn-success btn'>Add Todo</button>
         </div>
       </div>
     </form>
